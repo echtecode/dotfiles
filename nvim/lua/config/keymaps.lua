@@ -5,6 +5,9 @@
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
+-- Remap ESC
+keymap.set("i", "jj", "<ESC>")
+
 -- Do things without affecting the registers
 keymap.set("n", "x", '"_x')
 keymap.set("n", "<Leader>p", '"0p')
@@ -35,6 +38,9 @@ keymap.set("n", "%", "%zz")
 keymap.set("n", "*", "*zz")
 keymap.set("n", "#", "#zz")
 
+-- Press U for redo
+keymap.set("n", "U", "<C-r>")
+
 -- Delete a word backwards
 keymap.set("n", "dw", 'vb"_d')
 
@@ -53,6 +59,13 @@ keymap.set("n", "<leader>q", "<cmd>q<cr>")
 -- Save and Quit with leader key
 keymap.set("n", "<leader>z", "<cmd>wq<cr>")
 
+-- Turn off highlighted results
+keymap.set("n", "<leader>no", "<cmd>noh<cr>")
+keymap.set("n", "<ESC>", "<cmd>noh<cr>")
+
 ---------- Plugins ----------
 -- Oil floating
 keymap.set("n", "-", require("oil").toggle_float)
+
+-- Undo Tree
+keymap.set("n", "<leader>ut", ":UndotreeToggle<CR>", { desc = "Toggle [U]ndo[T]ree " })
