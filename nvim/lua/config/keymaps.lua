@@ -49,7 +49,11 @@ keymap.set("n", "<C-a>", "gg<S-v>G")
 
 -- Yank all
 keymap.set("n", "<C-y>", "gg<S-v>Gy")
---
+
+-- Tab navigation
+keymap.set("n", "<tab>", ":tabnext<Return>", opts)
+keymap.set("n", "<s-tab>", ":tabprev<Return>", opts)
+
 -- Save with leader key
 keymap.set("n", "<leader>w", "<cmd>w<cr>")
 
