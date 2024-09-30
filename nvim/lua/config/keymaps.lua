@@ -58,10 +58,10 @@ keymap.set("n", "<s-tab>", ":tabprev<Return>", opts)
 keymap.set("n", "<leader>w", "<cmd>w<cr>")
 
 -- Quit with leader key
-keymap.set("n", "<leader>q", "<cmd>q<cr>")
+keymap.set("n", "<leader>q", "<cmd>wq<cr>")
 
 -- Save and Quit with leader key
-keymap.set("n", "<leader>z", "<cmd>wq<cr>")
+keymap.set("n", "<leader>Q", "<cmd>qa!<cr>")
 
 -- Turn off highlighted results
 keymap.set("n", "<leader>no", "<cmd>noh<cr>")
