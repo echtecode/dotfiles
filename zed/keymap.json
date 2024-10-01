@@ -23,7 +23,7 @@
             "space f": "file_finder::Toggle",
             "space o": "tab_switcher::Toggle",
             "space e": "workspace::ToggleLeftDock",
-            "space p": "outline::Toggle",
+            "space _": "outline::Toggle",
             "space v": "editor::GoToDefinitionSplit"
         }
     },
