@@ -71,5 +71,8 @@ keymap.set("n", "<ESC>", "<cmd>noh<cr>")
 -- Oil floating
 keymap.set("n", "-", require("oil").toggle_float)
 
+-- Navbuddy
+keymap.set("n", "_", "<cmd>Navbuddy<CR>", { desc = "Toggle Navbuddy" })
+
 -- Undo Tree
 keymap.set("n", "<leader>ut", ":UndotreeToggle<CR>", { desc = "Toggle [U]ndo[T]ree " })
