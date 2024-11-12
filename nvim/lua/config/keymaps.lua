@@ -7,6 +7,7 @@ local opts = { noremap = true, silent = true }
 
 -- Remap ESC
 keymap.set("i", "jj", "<ESC>")
+keymap.set("i", "kj", "<ESC>")
 
 -- Do things without affecting the registers
 keymap.set("n", "x", '"_x')
@@ -21,6 +22,13 @@ keymap.set("n", "<Leader>d", '"_d')
 keymap.set("n", "<Leader>D", '"_D')
 keymap.set("v", "<Leader>d", '"_d')
 keymap.set("v", "<Leader>D", '"_D')
+
+-- Move lines up and down
+keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
+-- improved join line operation
+keymap.set("n", "J", "mzJ`z")
 
 -- Center buffer while navigating
 keymap.set("n", "<C-u>", "<C-u>zz")
@@ -51,8 +59,8 @@ keymap.set("n", "<C-a>", "gg<S-v>G")
 keymap.set("n", "<C-y>", "gg<S-v>Gy")
 
 -- Tab navigation
-keymap.set("n", "<tab>", ":tabnext<Return>", opts)
-keymap.set("n", "<s-tab>", ":tabprev<Return>", opts)
+keymap.set("n", "<TAB>", ":tabnext<Return>", opts)
+keymap.set("n", "<S-TAB>", ":tabprev<Return>", opts)
 
 -- Save with leader key
 keymap.set("n", "<leader>w", "<cmd>w<cr>")
